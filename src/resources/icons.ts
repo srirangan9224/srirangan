@@ -68,3 +68,39 @@ export const iconLibrary: Record<string, IconType> = {
 
 export type IconLibrary = typeof iconLibrary;
 export type IconName = keyof IconLibrary;
+
+import {
+  SiC,
+  SiCplusplus,
+  SiPython,
+  SiHtml5,
+  SiMysql,
+  SiArduino,
+  SiEspressif,
+  SiLinux,
+  SiPytorch,
+  SiOpencv,
+  SiNumpy,
+  SiPandas,
+  SiGit,
+} from "react-icons/si";
+
+export const SimpleIcons = {
+  javascript: SiJavascript,
+  nextjs: SiNextdotjs,
+  figma: SiFigma,
+  supabase: SiSupabase,
+  c: SiC,
+  cpp: SiCplusplus,
+  python: SiPython,
+  html: SiHtml5,
+  mysql: SiMysql,
+  arduino: SiArduino,
+  espressif: SiEspressif,
+  linux: SiLinux,
+  pytorch: SiPytorch,
+  opencv: SiOpencv,
+  numpy: SiNumpy,
+  pandas: SiPandas,
+  git: SiGit,
+};

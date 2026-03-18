@@ -13,7 +13,7 @@ const person: Person = {
 };
 
 const newsletter: Newsletter = {
-  display: true,
+  display: false,
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
   description: <>My weekly newsletter about creativity and engineering</>,
 };
@@ -56,7 +56,7 @@ const social: Social = [
 
 const home: Home = {
   path: "/",
-  image: "/images/og/home.jpg",
+  image: "/images/og/homee.jpg",
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
@@ -102,7 +102,8 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        description Here (edit)
+        Motivated computer engineering undergraduate with hands-on experience in embedded systems, firmware development, and cyber-physical security. Skilled in PCB design, Cyber-Physical Systems (CPS) testbeds, and FPGA prototyping, with a strong research background and active involvement mentoring and organizing several hackathons. Seeking 
+        internships to apply hardware and software expertise to real-world challenges.
       </>
     ),
   },
@@ -111,44 +112,64 @@ const about: About = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Georgia Tech Cyber-Physical Security Lab",
+        timeframe: "August 2025 - Present",
+        role: "Undergraduate researcher",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Conducted research with the Cyber-Physical Security Lab (CPSec) on the GT–Hyundai project, 
+            focusing on evaluating the security of in-vehicle embedded communication systems against 
+            protocol-level and adversarial attacks.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Designed and built a CAN bus testbed from the ground up to generate, decode, and analyze 
+            automotive communication messages, enabling controlled experimentation on real-world vehicle 
+            network behaviors.
+          </>,
+          <>
+          Executed and analyzed over 50,000 test rules on the CAN testbed to systematically evaluate communication integrity, 
+          uncover vulnerabilities, and assess the resilience of embedded vehicle systems to security threats.
+          </>,
+        ],
+        images: [
+           {
+            src: "/images/projects/GTHyundai/temp.jpg",
+            alt: "CAN testbed",
+            width: 40,
+            height: 20,
+          },
+        ],
+      },
+      {
+        company: "Florida Institute of Cybersecurity Research",
+        timeframe: "January 2025 - April 2025",
+        role: "Undergraduate research assistant",
+        achievements: [
+          <>
+            Investigated control-flow attestation techniques for embedded systems by leveraging electromagnetic (EM) side-channel emissions, 
+            running experiments to capture and analyze EM traces and correlating them with program execution patterns to identify deviations 
+            indicative of runtime control-flow anomalies.
+          </>,
+          <>
+            Developed a comprehensive attack pipeline to demonstrate system vulnerability 
+            by disassembling compiled C binaries using GCC toolchains, analyzing ELF structures with objdump, 
+            and mapping low-level instruction flows to identify exploitable gadgets for control-flow hijacking.
+          </>,
+          <>
+          Successfully constructed and executed a Return-Oriented Programming (ROP) attack on an Arduino-based platform by chaining together 
+          carefully selected instruction sequences, validating the exploit through runtime testing, and assessing its impact on system integrity 
+          and security guarantees.
           </>,
         ],
         images: [
           // optional: leave the array empty if you don't want to display images
           {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
+            src: "/images/projects/EMCFA/setup.jpg",
+            alt: "EMCFA project",
+            width: 40,
+            height: 20,
           },
         ],
-      },
-      {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
-        achievements: [
-          <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
-          </>,
-          <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
-          </>,
-        ],
-        images: [],
       },
     ],
   },
@@ -157,13 +178,18 @@ const about: About = {
     title: "Studies",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "Georgia Institute of Technology",
+        description: 
+        <>BS Computer Engineering (edit)
+        </>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
-      },
+        name: "University of Florida",
+        description:
+        <>
+        Transfered with 31 credits
+        </>,
+      }
     ],
   },
   technical: {
@@ -172,13 +198,10 @@ const about: About = {
     skills: [
       {
         title: "Figma",
-        description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
-        ),
         tags: [
           {
             name: "Figma",
-            icon: "figma",
+            icon: "javascript",
           },
         ],
         // optional: leave the array empty if you don't want to display images
