@@ -16,6 +16,7 @@ import { baseURL, about, person, social } from "@/resources";
 import TableOfContents from "@/components/about/TableOfContents";
 import styles from "@/components/about/about.module.scss";
 import React from "react";
+import { Flex} from "@once-ui-system/core";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -43,6 +44,11 @@ export default function About() {
       title: about.studies.title,
       display: about.studies.display,
       items: about.studies.institutions.map((institution) => institution.name),
+    },
+    {
+    title: about.activities?.title || "Activities", // Fallback to string if undefined
+    display: about.activities?.display || false,   // Fallback to false
+    items: about.activities?.items?.map((item) => item.organization) || [], // Fallback to empty array
     },
     {
       title: about.technical.title,
@@ -261,6 +267,65 @@ export default function About() {
             </>
           )}
 
+          {/* Activities Section */}
+          {about.activities && about.activities.display && (
+  <>
+    <Heading as="h2" id={about.activities.title} variant="display-strong-s" marginBottom="m">
+      {about.activities.title}
+    </Heading>
+    <Column fillWidth gap="l" marginBottom="40">
+      {about.activities.items.map((item, index) => (
+        <Column key={`${item.organization}-${item.role}-${index}`} fillWidth>
+          <Row fillWidth horizontal="between" vertical="end" marginBottom="4">
+            <Text id={item.organization} variant="heading-strong-l">
+              {item.organization}
+            </Text>
+            <Text variant="heading-default-xs" onBackground="neutral-weak">
+              {item.timeframe}
+            </Text>
+          </Row>
+          <Text variant="body-default-s" onBackground="brand-weak" marginBottom="m">
+            {item.role}
+          </Text>
+          <Column as="ul" gap="16">
+            {item.achievements.map(
+              (achievement: React.ReactNode, index: number) => (
+                <Text
+                  as="li"
+                  variant="body-default-m"
+                  key={`${item.organization}-${index}`}
+                >
+                  {achievement}
+                </Text>
+              ),
+            )}
+          </Column>
+          {item.images && item.images.length > 0 && (
+            <Row fillWidth paddingTop="m" paddingLeft="40" gap="12" wrap>
+              {item.images.map((image, index) => (
+                <Row
+                  key={index}
+                  border="neutral-medium"
+                  radius="m"
+                  minWidth={image.width}
+                  height={image.height}
+                >
+                  <Media
+                    enlarge
+                    radius="m"
+                    sizes={image.width.toString()}
+                    alt={image.alt}
+                    src={image.src}
+                  />
+                </Row>
+              ))}
+            </Row>
+          )}
+        </Column>
+      ))}
+    </Column>
+  </>
+)}
           {about.studies.display && (
             <>
               <Heading as="h2" id={about.studies.title} variant="display-strong-s" marginBottom="m">

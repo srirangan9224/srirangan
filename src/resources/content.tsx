@@ -436,6 +436,57 @@ const about: About = {
       }
     ],
   },
+  activities: {
+    display: true,
+    title: "Leadership & Activities",
+    items: [
+      {
+        organization: "Robotech Hackathon (GT IEEE)",
+        timeframe: "January 2026",
+        role: "Organizer",
+        achievements: [
+          <>
+            Directed hackathon operations by managing volunteer workflows, engineering comprehensive judging rubrics to ensure fair project evaluation, and developing custom website features to enhance the participant and organizer experience.
+          </>,
+          <>
+            Enhanced the hackathon’s digital infrastructure by developing custom website features and internal tools to streamline participant registration and parts checkout.
+          </>,
+          <>
+            Oversaw the integration of hardware and software resources for the event, ensuring all technical requirements for participant projects—including power constraints and network connectivity—were met through proactive planning and resource allocation.
+          </>
+        ],
+      },
+      {
+        organization: "SwampHacks X and XI (UF)",
+        timeframe: "January 2025, January 2026",
+        role: "Mentor",
+        achievements: [
+          <>
+            Provided comprehensive support for participants at both SwampHacks X (in-person) and XI (virtual), guiding students through the full development lifecycle from initial ideation to final project deployment.
+          </>,
+          <>
+          Assisted teams in troubleshooting front-end and back-end web development issues, ensuring successful integration of APIs and the deployment of live applications to cloud hosting platforms.
+          </>,
+        ],
+      },
+      {
+        organization: "HackGT(hexlabs)",
+        timeframe: "September 2025",
+        role: "Mentor",
+        achievements: [
+          <>
+            Provided 36 hours of continuous support for 10+ participants, troubleshooting complex hardware-software integrations involving ESP32 microcontrollers, sensors, and full-stack web applications.
+          </>,
+          <>
+            Facilitated project completion for dozens of teams by resolving critical "showstopper" bugs in C++, Python, and JavaScript, ensuring high-quality submissions within strict competition deadlines.
+          </>,
+          <>
+            Streamlined the development process for beginner and intermediate hackers by resolving environment-specific issues, such as cross-compiler toolchain configurations and driver installations for development boards.
+          </>,
+        ],
+      },
+    ],
+  },
 };
 
 const blog: Blog = {
@@ -457,8 +508,8 @@ const work: Work = {
 };
 
 const gallery: Gallery = {
-  path: "/Certifications",
-  label: "Certifications",
+  path: "/Certificates",
+  label: "Certificates",
   title: `Certifications – ${person.name}`,
   description: `Certificates earned by ${person.name}`,
   // Images by https://lorant.one
@@ -491,17 +542,27 @@ const gallery: Gallery = {
     },
     {
       src: "/images/gallery/CS50AI.png",
-      alt: "image",
+      alt: "CS50",
       orientation: "horizontal",
     },
     {
       src: "/images/gallery/CS50W.png",
-      alt: "image",
+      alt: "CS50",
       orientation: "horizontal",
     },
     {
       src: "/images/gallery/CS50_SQL.png",
-      alt: "image",
+      alt: "CS50",
+      orientation: "horizontal",
+    },
+    {
+      src: "/images/gallery/HackGT.png",
+      alt: "HackGT",
+      orientation: "horizontal",
+    },
+    {
+      src: "/images/gallery/swampHacks.png",
+      alt: "SH",
       orientation: "horizontal",
     },
   ],
