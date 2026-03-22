@@ -52,6 +52,12 @@ const social: Social = [
     link: `mailto:${person.email}`,
     essential: true,
   },
+  {
+    name: "resume",
+    icon: "paper",
+    link: `mailto:${person.email}`,
+    essential: true,
+  },
 ];
 
 const home: Home = {
@@ -76,7 +82,7 @@ const home: Home = {
   },
   subline: (
     <>
-    Hi, I’m Srirangan Sudarshan, a Computer Engineering enthusiast with a strong interest in 
+    Hi, I’m Srirangan Sudarshan, a Computer Engineering student with a strong interest in 
     hardware and cybersecurity. My passion lies in computer architecture, VLSI, hardware-oriented 
     security and trust, and designing novel computing architectures that are both secure and high-performance. 
     This portfolio highlights my projects, research, and explorations in these areas.
@@ -234,10 +240,6 @@ const about: About = {
       {
         title: "Programming Skills",
         tags: [
-          {
-          name: "JavaScript",
-          icon: "javascript",
-        },
         {
           name: "C",
           icon: "c",
@@ -255,20 +257,28 @@ const about: About = {
           icon: "java",
         },
         {
-          name: "HTML",
-          icon: "html",
-        },
-        {
-          name: "SQL",
-          icon: "sql",
-        },
-        {
           name: "Verilog",
           icon: "verilog",
         },
         {
           name: "Assembly (RISC-V)",
           icon: "assembly",
+        },
+        {
+          name: "JavaScript",
+          icon: "javascript",
+        },
+        {
+          name: "Typescript",
+          icon: "typescript",
+        },
+        {
+          name: "HTML",
+          icon: "html",
+        },
+        {
+          name: "SQL",
+          icon: "sql",
         },
         {
           name: "MATLAB",
@@ -439,8 +449,8 @@ const blog: Blog = {
 
 const work: Work = {
   path: "/work",
-  label: "Work",
-  title: `Projects – ${person.name}`,
+  label: "Projects",
+  title: "Projects",
   description: `Design and dev projects by ${person.name}`,
   // Create new project pages by adding a new .mdx file to app/blog/posts
   // All projects will be listed on the /home and /work routes

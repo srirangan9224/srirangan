@@ -1,0 +1,54 @@
+---
+title: "RC Bluetooth Car (ESP32)"
+publishedAt: "2026-03-04"
+venue: "Hive Makerspace Workshop"
+summary: "Custom dual-ESP32 RC car system using BLE for low-latency, responsive driving."
+images:
+  - "/images/projects/project-01/car1.jpg"
+  - "/images/projects/project-01/car_2.mp4"
+team:
+  - name: "Srirangan Sudarshan"
+    role: "Programmer"
+    avatar: "/images/Srirangan.jpg"
+    linkedIn: "https://www.linkedin.com/srirangan-sudarshan"
+---
+
+## Overview
+
+As part of a hands-on workshop at Hive Makerspace, I developed a custom RC car system utilizing **two ESP32 microcontrollers**—one acting as the vehicle's "brain" and the other as a dedicated handheld controller. The project focused on mastering **Bluetooth Low Energy (BLE) protocols** to create a low-latency, responsive driving experience.
+
+By moving beyond simple pre-built kits, I modified low-level C code to handle motor PWM signals and established a secure wireless "handshake" between the two devices, ensuring **precise maneuverability** and **real-time feedback**.
+
+## The Development Process
+
+The project was executed in three distinct technical phases to ensure stability and ease of debugging:
+
+### 1. Chassis & Motor Firmware
+I modified C code within the ESP32 environment to control the car’s drivetrain. This involved configuring GPIO pins and fine-tuning **Pulse Width Modulation (PWM)** to manage motor speed and steering transitions.
+
+### 2. Controller Integration
+Developed the firmware for the handheld controller unit, mapping **physical joystick inputs** to digital data packets ready for transmission.
+
+### 3. BLE Handshake & Connectivity
+Using BLE communication libraries, I established the wireless link. Testing followed a strict hierarchy:
+
+- **Phase A:** Testing the car’s receiver by pairing it with a smartphone app to verify motor responses.  
+- **Phase B:** Establishing a direct peer-to-peer BLE connection between the controller ESP32 and the car ESP32.
+
+## Key Features
+
+- **Dual-ESP32 Architecture:** Leveraged ESP32 for both transmission and reception, allowing for future scalability such as adding telemetry data.  
+- **BLE Protocol Efficiency:** Utilized Bluetooth Low Energy to minimize power consumption while maintaining the high-speed data transfer required for real-time steering.  
+- **Modular C Logic:** Custom-modified firmware for motor drivers to allow smoother acceleration curves instead of "all-or-nothing" movement.  
+- **Iterative Testing Workflow:** Verified connectivity via mobile device before committing to dedicated hardware-to-hardware links.
+
+## Technologies Used
+
+- **Microcontrollers:** ESP32 (Dual-unit setup)  
+- **Communication:** BLE (Bluetooth Low Energy) Libraries  
+- **Language:** C / C++ (Arduino Core / ESP-IDF)  
+- **Hardware:** PWM Motor Drivers, Dual-axis Joysticks, Hive Makerspace Chassis, H-Bridge
+
+## Outcomes & Learnings
+
+The final result was a highly responsive RC platform with **minimal input lag**. This project deepened my understanding of **wireless handshaking**, real-time motor control, and the importance of **unit testing** (testing the car with a phone before the controller). It highlighted how **Hive Makerspace’s collaborative environment** accelerates complex hardware-software integration and prototyping.

@@ -8,7 +8,6 @@ import { SiJupyter } from "react-icons/si";
 import { TbNetwork, TbBug } from "react-icons/tb";
 
 
-
 import {
   SiReact,
   SiNumpy,
@@ -172,7 +171,7 @@ export const iconLibrary: Record<string, IconType> = {
   kicad: TbCpu,              // PCB / hardware design
   quartus: HiCpuChip,            // FPGA design
   vivado: HiCpuChip,             // FPGA design
-
+  paper: HiOutlineDocument, // resume paper
 };
 
 export type IconLibrary = typeof iconLibrary;

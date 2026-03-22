@@ -31,15 +31,51 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   link,
 }) => {
   return (
-    <Column fillWidth gap="m">
-      <Carousel
-        sizes="(max-width: 960px) 100vw, 960px"
-        items={images.map((image) => ({
-          slide: image,
-          alt: title,
-        }))}
-      />
+    <Column width={70} gap="m" alignSelf="center">
+      <Flex 
+        width={70} 
+        height={40} 
+        overflow="hidden" 
+        radius="l" 
+        position="relative"
+        // This CSS block ensures both images and videos are forced to 
+        // fill the 70x40 area and stay centered.
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center'
+        }}
+      >
+        <Carousel
+          aspectRatio="1"
+          sizes="(max-width: 960px) 100vw, 700px"
+          items={images.map((image) => ({
+            slide: image,
+            alt: title,
+          }))}
+          // Adding a class or style here to target internal video tags
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover'
+          }}
+        />
+        
+        {/* GLOBAL STYLE INJECTION: This is the most reliable way to 
+            force the video inside the Carousel to fit the 70x40 frame. */}
+        <style jsx global>{`
+          .project-card-video-fix video, 
+          .project-card-video-fix img {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
+            object-position: center !important;
+          }
+        `}</style>
+      </Flex>
+
       <Flex
+        className="project-card-video-fix" // Links to the style tag above
         s={{ direction: "column" }}
         fillWidth
         paddingX="s"

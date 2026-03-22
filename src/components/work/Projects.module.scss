@@ -15,3 +15,23 @@
     left: -2rem;
     transition: var(--transition-micro-medium);
 }
+
+.project-card-wrapper {
+    width: 70rem; // Your desired width
+    margin: 0 auto; // Centers the card
+
+    // Targets the image/video container specifically
+    :global(.smart-image), 
+    :global(.media-wrapper) { 
+        height: 20rem !important;
+        width: 100%;
+        object-fit: cover;
+        overflow: hidden;
+    }
+
+    // Ensures the text content remains visible below
+    .content {
+        height: auto;
+        padding: var(--static-space-20);
+    }
+}
