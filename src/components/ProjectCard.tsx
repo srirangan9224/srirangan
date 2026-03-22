@@ -34,7 +34,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
     <Column width={70} gap="m">
       <Flex 
         width={70} 
-        height={40} 
+        height={60} 
         overflow="hidden" 
         radius="l" 
         position="relative"
@@ -47,7 +47,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         }}
       >
         <Carousel
-          aspectRatio="1"
+          aspectRatio="auto"
           sizes="(max-width: 960px) 100vw, 700px"
           items={images.map((image) => ({
             slide: image,
@@ -105,7 +105,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                   style={{ margin: "0", width: "fit-content" }}
                   href={href}
                 >
-                  <Text variant="body-default-s">Read case study</Text>
+                  <Text variant="body-default-s">Read project report</Text>
                 </SmartLink>
               )}
               {link && (

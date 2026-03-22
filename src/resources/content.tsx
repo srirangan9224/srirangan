@@ -457,52 +457,52 @@ const work: Work = {
 };
 
 const gallery: Gallery = {
-  path: "/gallery",
-  label: "Gallery",
-  title: `Photo gallery – ${person.name}`,
-  description: `A photo collection by ${person.name}`,
+  path: "/Certifications",
+  label: "Certifications",
+  title: `Certifications – ${person.name}`,
+  description: `Certificates earned by ${person.name}`,
   // Images by https://lorant.one
   // These are placeholder images, replace with your own
   images: [
     {
-      src: "/images/gallery/horizontal-1.jpg",
+      src: "/images/gallery/Meta.png",
+      alt: "database engineering",
+      orientation: "horizontal",
+    },
+    {
+      src: "/images/gallery/UPenn.png",
+      alt: "Python and Java",
+      orientation: "horizontal",
+    },
+    {
+      src: "/images/gallery/UF.png",
+      alt: "Hypergator (Supercomputing)",
+      orientation: "horizontal",
+    },
+    {
+      src: "/images/gallery/Duke.png",
+      alt: "ML",
+      orientation: "horizontal",
+    },
+    {
+      src: "/images/gallery/Imperial.png",
+      alt: "Multi",
+      orientation: "horizontal",
+    },
+    {
+      src: "/images/gallery/CS50AI.png",
       alt: "image",
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/vertical-4.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-3.jpg",
+      src: "/images/gallery/CS50W.png",
       alt: "image",
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/vertical-1.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/vertical-2.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-2.jpg",
+      src: "/images/gallery/CS50_SQL.png",
       alt: "image",
       orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-4.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-3.jpg",
-      alt: "image",
-      orientation: "vertical",
     },
   ],
 };

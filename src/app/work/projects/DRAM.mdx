@@ -1,0 +1,43 @@
+---
+title: "Solderable 4-Bit DRAM Array (IN PROGRESS)"
+publishedAt: "2026-03-17"
+summary: "Hand-soldered a 4-bit DRAM array using capacitors and n-MOS transistors to demonstrate volatile memory storage and refresh logic."
+images:
+  - "/images/projects/project-02/DRAM.jpg"
+
+team:
+  - name: "Srirangan Sudarshan"
+    role: "Engineer"
+    avatar: "/images/Srirangan.jpg"
+    linkedIn: "https://www.linkedin.com/srirangan-sudarshan"
+---
+
+## Overview
+
+Developed as part of a technical workshop at the **HIVE Makerspace (Georgia Tech)**, this project explores the physical architecture of volatile memory. By constructing a functional **4-bit Dynamic Random-Access Memory (DRAM)** array from discrete components, I transitioned from high-level computer science abstractions to the fundamental hardware engineering that powers modern computing.
+
+## Key Features
+
+- **Discrete Cell Architecture**: Engineered a 4-bit memory array from the ground up using **n-MOS transistors** as access gates and capacitors as the storage medium, replicating the fundamental physics of commercial DRAM.
+- **Manual State Control**: Integrated a tactile interface featuring push-buttons to simulate "Write" operations, allowing for the manual injection of charge into specific memory addresses to represent binary high ($1$) and low ($0$) states.
+- **Visual Status Monitoring**: Designed a real-time feedback system using LEDs to monitor the voltage levels of the storage capacitors, providing a direct visual demonstration of data retention and the effects of parasitic discharge.
+- **Hardwired Bus Logic**: Implemented a physical "Word Line" and "Bit Line" routing system on a solderable PCB, ensuring stable signal distribution and preventing cross-talk between the individual memory bits during read/write cycles.
+
+## Technologies Used
+
+- **N-Channel MOSFETs**: Utilized as high-speed electronic switches to gate access to the memory cells.
+- **Capacitive Storage**: Employed discrete capacitors to hold electrical charge, acting as the "memory" for each bit.
+- **HIVE Makerspace Resources**: Leveraged professional soldering equipment and circuit testing tools at Georgia Tech to move from breadboard prototype to a permanent hardware build.
+- **Discrete Components**: Integrated specific resistor values to manage current flow and protect the LED indicators from overvoltage.
+
+## Challenges and Learnings
+
+A primary challenge was mastering the **N-MOS switching characteristics**. I learned that the transistor requires a specific gate-to-source voltage (V<sub>GS</sub>) to allow current to flow; if the voltage was too low, the capacitor wouldn't charge, and if it was too high, it risked damaging the component. 
+
+Furthermore, the project provided a firsthand look at **charge leakage**. Because real-world capacitors are not perfect insulators, the "data" (charge) eventually drains, causing the LEDs to dim. This perfectly illustrated the necessity of the **Refresh Cycle** in modern RAM, where a controller must periodically rewrite the data to prevent loss.
+
+## Outcome
+
+The result is a functional 4-bit hardware demonstrator that demystifies how computers "remember" information. By building this at the **HIVE**, I gained a practical understanding of semiconductor behavior and the physical constraints of scaling memory, bridging the gap between theoretical logic and tangible electrical engineering.
+
+---
