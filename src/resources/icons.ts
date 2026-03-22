@@ -82,7 +82,6 @@ import {
   FaReddit,
   FaTelegram,
 } from "react-icons/fa6";
-import { Activity } from "react";
 
 
 export const iconLibrary: Record<string, IconType> = {
@@ -175,3 +174,6 @@ export const iconLibrary: Record<string, IconType> = {
   vivado: HiCpuChip,             // FPGA design
 
 };
+
+export type IconLibrary = typeof iconLibrary;
+export type IconName = keyof IconLibrary; // make sure this line exists
