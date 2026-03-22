@@ -55,7 +55,7 @@ const social: Social = [
   {
     name: "resume",
     icon: "paper",
-    link: `mailto:${person.email}`,
+    link: "/images/resume_Srirangan.pdf",
     essential: true,
   },
 ];
