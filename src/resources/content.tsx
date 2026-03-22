@@ -56,11 +56,11 @@ const social: Social = [
 
 const home: Home = {
   path: "/",
-  image: "/images/og/homee.jpg",
+  image: "/images/og/home.jpg",
   label: "Home",
-  title: `${person.name}'s Portfolio`,
+  title: `${person.firstName}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <></>,
   featured: {
     display: true,
     title: (
@@ -76,16 +76,20 @@ const home: Home = {
   },
   subline: (
     <>
-    I'm Selene, a design engineer at <Text as="span" size="xl" weight="strong">ONCE UI</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
-</>
+    Hi, I’m Srirangan Sudarshan, a Computer Engineering enthusiast with a strong interest in 
+    hardware and cybersecurity. My passion lies in computer architecture, VLSI, hardware-oriented 
+    security and trust, and designing novel computing architectures that are both secure and high-performance. 
+    This portfolio highlights my projects, research, and explorations in these areas.
+     Feel free to explore my work and connect to discuss collaboration or new ideas!
+    </>
   ),
 };
 
 const about: About = {
   path: "/about",
   label: "About",
-  title: `About – ${person.name}`,
-  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+  title: `About Me`,
+  description: `Meet ${person.name}, ${person.role} from Atlanta, Georgia`,
   tableOfContent: {
     display: true,
     subItems: false,
@@ -179,16 +183,47 @@ const about: About = {
     institutions: [
       {
         name: "Georgia Institute of Technology",
-        description: 
-        <>BS Computer Engineering (edit)
-        </>,
+        description: (
+          <Row gap="12" vertical="center">
+                <div className="ml-4">
+      <div className="font-semibold">
+        B.S. in Computer Engineering
+      </div>
+
+      <div className="text-sm text-gray-600">
+        Expected May 2028 • GPA: 3.50 / 4.00
+      </div>
+
+      <div className="mt-2 text-sm">
+        <strong>Relevant Coursework:</strong> Digital Logic, Data Structures, Digital Design Lab, Programming HW/SW systems
+      </div>
+
+      <div className="mt-1 text-sm">
+        <strong>Focus:</strong> Cybersecurity and Computer Hardware and Emerging Architectures
+      </div>
+    </div>
+
+          </Row>
+        ),
       },
       {
         name: "University of Florida",
         description:
-        <>
-        Transfered with 31 credits
-        </>,
+        (
+          <Row gap="12" vertical="center">
+                <div className="ml-4">
+      <div className="font-semibold">
+        B.S. in Computer Science
+      </div>
+
+      <div className="text-sm text-gray-600">
+  Transferred with 31 credits • GPA: 4.0 / 4.0
+</div>
+    </div>
+
+          </Row>
+        ),
+        
       }
     ],
   },
@@ -197,58 +232,198 @@ const about: About = {
     title: "Technical skills",
     skills: [
       {
-        title: "Figma",
+        title: "Programming Skills",
         tags: [
           {
-            name: "Figma",
-            icon: "javascript",
-          },
+          name: "JavaScript",
+          icon: "javascript",
+        },
+        {
+          name: "C",
+          icon: "c",
+        },
+        {
+          name: "C++",
+          icon: "cpp",
+        },
+        {
+          name: "Python",
+          icon: "python",
+        },
+        {
+          name: "Java",
+          icon: "java",
+        },
+        {
+          name: "HTML",
+          icon: "html",
+        },
+        {
+          name: "SQL",
+          icon: "sql",
+        },
+        {
+          name: "Verilog",
+          icon: "verilog",
+        },
+        {
+          name: "Assembly (RISC-V)",
+          icon: "assembly",
+        },
+        {
+          name: "MATLAB",
+          icon: "matlab",
+        },
         ],
         // optional: leave the array empty if you don't want to display images
         images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
         ],
       },
       {
-        title: "Next.js",
-        description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
-        ),
+        title: "Hardware",
+        description: <></>,
         tags: [
           {
-            name: "JavaScript",
-            icon: "javascript",
+            name: "FPGAs",
+            icon: "cpu",
           },
           {
-            name: "Next.js",
-            icon: "nextjs",
+            name: "Arduino",
+            icon: "arduino",
           },
           {
-            name: "Supabase",
-            icon: "supabase",
+            name: "ESP32",
+            icon: "cpu",
           },
+          {
+            name: "STM32",
+            icon: "cpu",
+          },
+          {
+            name: "CAN Bus",
+            icon: "git", // network/connection style fallback
+          },
+          {
+            name: "Oscilloscope",
+            icon: "activity",
+          },
+          {
+            name: "Multimeter",
+            icon: "activity",
+          },
+          {
+            name: "Logic Analyzer",
+            icon: "activity",
+          },
+
         ],
         // optional: leave the array empty if you don't want to display images
         images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
         ],
       },
+      {
+        title: "Frameworks and libraries",
+        description: <></>,
+        tags: [
+          {
+              name: "React",
+              icon: "react",
+            },
+            {
+              name: "Next.js",
+              icon: "nextjs",
+            },
+            // Machine Learning / AI
+            {
+              name: "TensorFlow",
+              icon: "tensorflow",
+            },
+            {
+              name: "PyTorch",
+              icon: "pytorch",
+            },
+            {
+              name: "Scikit-learn",
+              icon: "scikitlearn",
+            },
+
+            // Data / Visualization (optional but strong)
+            {
+              name: "NumPy",
+              icon: "numpy",
+            },
+            {
+              name: "Pandas",
+              icon: "pandas",
+            },
+            {
+              name: "OpenCV",
+              icon: "eye", // good fallback
+            },
+            {
+              name: "Django",
+              icon: "django",
+            },
+        ],
+        // optional: leave the array empty if you don't want to display images
+        images: [
+        ],
+      },
+      {
+        title: "tools",
+        description:<></>,
+        tags: [
+          {
+            name: "GitHub",
+            icon: "github",
+          },
+
+          // Embedded / IoT Platforms
+          {
+            name: "PlatformIO",
+            icon: "platformio",
+          },
+          {
+            name: "Arduino IDE",
+            icon: "arduino",
+          },
+
+          // Network & Analysis Tools
+          {
+            name: "Wireshark",
+            icon: "wireshark",
+          },
+
+          // Reverse Engineering / Security Tools
+          {
+            name: "Ghidra",
+            icon: "ghidra",
+          },
+
+          // Containers / Virtualization
+          {
+            name: "Docker",
+            icon: "docker",
+          },
+
+          // Misc Dev Tools
+          {
+            name: "VS Code",
+            icon: "vscode",
+          },
+          {
+            name: "Jupyter Notebook",
+            icon: "jupyter",
+          },
+          {
+            name: "kicad",
+            icon: "kicad",
+          },{
+            name: "quartus",
+            icon: "quartus",
+          }
+        ],
+      }
     ],
   },
 };
