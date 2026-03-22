@@ -1,0 +1,52 @@
+---
+title: "Electronic Voting Machine (EVM)"
+publishedAt: "2024-03-22"
+venue: "Academic Web Development Project"
+summary: "A secure, Django-based electronic voting portal featuring modular architecture and gender-based candidate categorization."
+team:
+  - name: "Srirangan Sudarshan"
+    role: "Full-Stack Developer"
+    avatar: "/images/Srirangan.jpg"
+    linkedIn: "https://www.linkedin.com/in/srirangan-sudarshan"
+---
+
+## Overview
+
+This project is a web-based **Electronic Voting Machine (EVM)** designed to digitize and secure the electoral process for student organizations. Built using the **Django** framework, the application replaces traditional paper ballots with a structured digital interface that manages everything from candidate registration to real-time result tallying.
+
+By utilizing a modular directory structure under the `voting/` application, the system ensures high data integrity and a seamless user experience across different stages of the voting lifecycle.
+
+## The Development Process
+
+The application architecture was designed with modularity in mind, separating the presentation layer from the core voting logic across five key areas:
+
+### 1. Templating & Layout (The Outline)
+I implemented a centralized `outline` page that serves as the base layout for the entire application. This contains the global **HTML Title Bar** and navigation, ensuring that UI updates persist across all sub-pages automatically through Django's template inheritance.
+
+### 2. Candidate Organization (The LOC)
+To improve voter clarity, I developed a **List of Candidates (LOC)** page. This interface programmatically separates candidates by gender, serving as a critical review step to ensure voters are well-informed before entering the polling phase.
+
+### 3. Backend & Logic Integration
+The backend handles the transition from user input to database storage. I utilized **Django’s form handling** to process votes securely and integrated **Java-based logic** for specific computational tasks, ensuring the system remains robust under concurrent user loads.
+
+## Key Features
+
+- **Modular "Voting" Directory**: A clean project structure housing the outline, about, LOC, voting, and results pages for easy maintenance.
+- **Secure Form Submission**: The voting interface utilizes radio buttons within a Django POST form to prevent multiple selections and ensure "one person, one vote" logic.
+- **Gender-Based Filtering**: Automated categorization of candidates on the LOC page to provide a structured and professional overview of the election field.
+- **Real-Time Results**: A dedicated results page that aggregates data directly from the database to display current standings once the polls close.
+- **Instructional UX**: An integrated 'About' page that provides clear, step-by-step instructions and the general purpose of the application to minimize user error.
+
+## Technologies Used
+
+- **Backend Framework**: Django (Python)
+- **Programming Languages**: Java (Logic/Middleware), Python
+- **Frontend**: HTML5, CSS3, JavaScript
+- **Database**: SQLite / PostgreSQL
+- **Architecture**: MVT (Model-View-Template)
+
+## Outcomes & Learnings
+
+The project successfully demonstrated how **web frameworks like Django** can be used to solve real-world logistical challenges like campus elections. This development process deepened my understanding of **form validation**, **database relationships**, and the importance of a **base layout (outline)** for maintaining visual consistency in complex web applications.
+
+---

@@ -30,68 +30,65 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   avatars,
   link,
 }) => {
-  return (
-    <Column width={70} gap="m">
-      <Flex 
-        width={70} 
-        height={60} 
-        overflow="hidden" 
-        radius="l" 
-        position="relative"
-        // This CSS block ensures both images and videos are forced to 
-        // fill the 70x40 area and stay centered.
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center'
-        }}
-      >
-        <Carousel
-          aspectRatio="auto"
-          sizes="(max-width: 960px) 100vw, 700px"
-          items={images.map((image) => ({
-            slide: image,
-            alt: title,
-          }))}
-          // Adding a class or style here to target internal video tags
-          style={{
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover'
-          }}
-        />
-        
-        {/* GLOBAL STYLE INJECTION: This is the most reliable way to 
-            force the video inside the Carousel to fit the 70x40 frame. */}
-        <style jsx global>{`
-          .project-card-video-fix video, 
-          .project-card-video-fix img {
-            width: 100% !important;
-            height: 100% !important;
-            object-fit: cover !important;
-            object-position: center !important;
-          }
-        `}</style>
-      </Flex>
+  const hasImages = images && images.length > 0;
 
+  return (
+    <Column fillWidth gap="m">
+      {/* 1. IMAGE SECTION: Only renders if images exist */}
+      {hasImages && (
+        <Flex 
+          fillWidth
+          aspectRatio="auto" 
+          overflow="hidden" 
+          radius="l" 
+          position="relative"
+          background="neutral-medium"
+        >
+          <Carousel
+            aspectRatio="auto"
+            sizes="(max-width: 960px) 100vw, 700px"
+            items={images.map((image) => ({
+              slide: image,
+              alt: title,
+            }))}
+            style={{
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover'
+            }}
+          />
+          
+          <style jsx global>{`
+            .project-card-video-fix video, 
+            .project-card-video-fix img {
+              width: 100% !important;
+              height: 100% !important;
+              object-fit: cover !important;
+              object-position: center !important;
+            }
+          `}</style>
+        </Flex>
+      )}
+
+      {/* 2. CONTENT SECTION: Always renders */}
       <Flex
-        className="project-card-video-fix" // Links to the style tag above
-        s={{ direction: "column" }}
+        className="project-card-video-fix"
+        direction="column"
         fillWidth
         paddingX="s"
-        paddingTop="12"
+        paddingTop={hasImages ? "12" : "0"} 
         paddingBottom="24"
         gap="l"
       >
         {title && (
-          <Flex flex={5}>
+          <Flex>
             <Heading as="h2" wrap="balance" variant="heading-strong-xl">
               {title}
             </Heading>
           </Flex>
         )}
         {(avatars?.length > 0 || description?.trim() || content?.trim()) && (
-          <Column flex={7} gap="16">
+          <Column fillWidth gap="16">
             {avatars?.length > 0 && <AvatarGroup avatars={avatars} size="m" reverse />}
             {description?.trim() && (
               <Text wrap="balance" variant="body-default-s" onBackground="neutral-weak">
