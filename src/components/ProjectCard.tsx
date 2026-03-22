@@ -31,7 +31,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   link,
 }) => {
   return (
-    <Column width={70} gap="m" alignSelf="center">
+    <Column width={70} gap="m">
       <Flex 
         width={70} 
         height={40} 
