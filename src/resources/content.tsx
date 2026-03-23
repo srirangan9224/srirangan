@@ -78,7 +78,7 @@ const home: Home = {
         </Text>
       </Row>
     ),
-    href: "/work/building-once-ui-a-customizable-design-system",
+    href: "/work/",
   },
   subline: (
     <>
@@ -470,7 +470,21 @@ const about: About = {
         ],
       },
       {
-        organization: "HackGT(hexlabs)",
+              organization: "Georgia Tech Solar Racing",
+              timeframe: "August 2025 – December 2025", // Update with your actual dates
+              role: "Electrical Engineer, Auxiliary Subteam",
+              achievements: [
+                <>
+                  Engineered the full-suite lighting system, managing the end-to-end KiCad workflow from schematic capture to high-density PCB layout for headlights, indicators, and emergency strobes.
+                  </>,
+                <>
+                  Validated hardware performance through empirical bench testing and comparative brightness analysis, ensuring all auxiliary boards met thermal management and race safety requirements.
+                </>,
+              ],
+      },
+
+      {
+        organization: "HackGT(Hexlabs)",
         timeframe: "September 2025",
         role: "Mentor",
         achievements: [
@@ -489,13 +503,17 @@ const about: About = {
   },
 };
 
-const blog: Blog = {
+
+const blog = {
   path: "/blog",
   label: "Blog",
   title: "Writing about design and tech...",
   description: `Read what ${person.name} has been up to recently`,
   // Create new blog posts by adding a new .mdx file to app/blog/posts
   // All posts will be listed on the /blog route
+  posts: [
+    // add posts here later
+  ]
 };
 
 const work: Work = {
