@@ -186,7 +186,7 @@ const mailchimp: MailchimpConfig = {
 
 // default schema data
 const schema: SchemaConfig = {
-  logo: "",
+  logo: "/favicon.ico",
   type: "Organization",
   name: "Once UI",
   description: home.description,
