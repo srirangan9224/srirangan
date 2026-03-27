@@ -41,14 +41,14 @@ export default function About() {
       items: about.work.experiences.map((experience) => experience.company),
     },
     {
-      title: about.studies.title,
-      display: about.studies.display,
-      items: about.studies.institutions.map((institution) => institution.name),
-    },
-    {
     title: about.activities?.title || "Activities", // Fallback to string if undefined
     display: about.activities?.display || false,   // Fallback to false
     items: about.activities?.items?.map((item) => item.organization) || [], // Fallback to empty array
+    },
+    {
+      title: about.studies.title,
+      display: about.studies.display,
+      items: about.studies.institutions.map((institution) => institution.name),
     },
     {
       title: about.technical.title,
