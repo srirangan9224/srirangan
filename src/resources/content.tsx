@@ -105,7 +105,7 @@ const about: About = {
   },
   calendar: {
     display: true,
-    link: "https://cal.com",
+    link: "https://calendar.app.google/cCuuGkAkpnyM5zAC8",
   },
   intro: {
     display: true,
