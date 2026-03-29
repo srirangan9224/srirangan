@@ -475,10 +475,10 @@ const about: About = {
               role: "Electrical Engineer, Auxiliary Subteam",
               achievements: [
                 <>
-                  Engineered the full-suite lighting system, managing the end-to-end KiCad workflow from schematic capture to high-density PCB layout for headlights, indicators, and emergency strobes.
+                  Engineered the full-suite lighting system, managing the end-to-end KiCad workflow from schematic capture to high-density PCB layout for side lights.
                   </>,
                 <>
-                  Validated hardware performance through empirical bench testing and comparative brightness analysis, ensuring all auxiliary boards met thermal management and race safety requirements.
+                  Validated hardware performance through empirical bench testing and comparative brightness analysis, ensuring all auxiliary boards met brightness and race safety requirements.
                 </>,
               ],
       },
@@ -489,13 +489,10 @@ const about: About = {
         role: "Mentor",
         achievements: [
           <>
-            Provided 36 hours of continuous support for 10+ participants, troubleshooting complex hardware-software integrations involving ESP32 microcontrollers, sensors, and full-stack web applications.
-          </>,
-          <>
             Facilitated project completion for dozens of teams by resolving critical "showstopper" bugs in C++, Python, and JavaScript, ensuring high-quality submissions within strict competition deadlines.
           </>,
           <>
-            Streamlined the development process for beginner and intermediate hackers by resolving environment-specific issues, such as cross-compiler toolchain configurations and driver installations for development boards.
+            Streamlined the development process for beginner and intermediate hackers by resolving environment-specific issues, such as cross-compiler toolchain configurations and driver installations.
           </>,
         ],
       },
