@@ -112,8 +112,7 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Motivated computer engineering undergraduate with hands-on experience in embedded systems, firmware development, and cyber-physical security. Skilled in PCB design, Cyber-Physical Systems (CPS) testbeds, and FPGA prototyping, with a strong research background and active involvement mentoring and organizing several hackathons. Seeking 
-        internships to apply hardware and software expertise to real-world challenges.
+        I am a Computer Engineering undergraduate with hands-on experience in embedded systems, firmware development, and cyber-physical security. I have worked on PCB design, built Cyber-Physical Systems (CPS) testbeds, and explored FPGA prototyping through both projects and research. I also enjoy mentoring students and helping organize hackathons, which has strengthened my teamwork and leadership skills. I am looking for internship opportunities where I can apply my hardware and software knowledge to real-world problems.
       </>
     ),
   },
