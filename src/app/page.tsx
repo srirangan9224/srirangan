@@ -26,6 +26,71 @@ export async function generateMetadata() {
   });
 }
 
+const CareerGoals = () => {
+  return (
+    <Column fillWidth gap="16" paddingY="48" horizontal="start">
+      
+      {/* Title */}
+        <Heading as="h2" variant="display-strong-xs">
+            Career Goals
+        </Heading>
+
+
+      <Column maxWidth="m" gap="12">
+
+        {/* Paragraph 1 */}
+        <Text 
+          variant="body-default-l"
+          as="p"
+          onBackground="neutral-weak"
+        >
+          My long-term goal is to become a hardware systems architect and researcher focused on secure and high-performance digital systems. I am particularly interested in the intersection of VLSI design, computer architecture, and hardware cybersecurity, where I aim to design systems that are efficient, scalable, and resilient against threats such as side-channel, fault injection, and microarchitectural attacks. I am especially motivated by the challenge of bridging low-level hardware design with system-level security to create robust and trustworthy computing platforms.
+        </Text>
+
+        {/* Highlight Line */}
+        <Text 
+          variant="body-default-l"
+          as="p"
+          onBackground="neutral-weak"
+        >
+          As computing systems grow more complex, I aim to integrate security directly into hardware design—making trust, reliability, and verifiability fundamental aspects of modern architectures rather than afterthoughts. I am particularly interested in exploring secure processor design, control-flow integrity, and hardware-software co-design approaches that enhance both performance and security.
+        </Text>
+
+        {/* Paragraph 2 */}
+        <Text 
+          variant="body-default-l"
+          as="p"
+          onBackground="neutral-weak"
+        >
+          To achieve this, I plan to pursue a Master’s degree in Electrical and Computer Engineering 
+          (ECE), where I can deepen my knowledge in advanced digital design, secure architectures, 
+          and hardware-software co-design.
+        </Text>
+
+        {/* Paragraph 3 */}
+        <Text 
+          variant="body-default-l"
+          as="p"
+          onBackground="neutral-weak"
+        >
+          Currently, I am building this foundation through coursework, and research in control flow attestation and firmware validation, where I explore practical implementations of hardware security concepts. Moving forward, I aim to expand my research experience through work in secure processor design, contribute to academic publications, and gain industry exposure through internships in semiconductor and hardware security roles.
+        </Text>
+
+        {/* Closing */}
+        <Text 
+          variant="body-default-l"
+          onBackground="neutral-weak"
+        >
+          By combining research, practical design experience, and graduate education, I hope to 
+          contribute to the development of next-generation computing systems that are both 
+          high-performance and inherently secure.
+        </Text>
+
+      </Column>
+    </Column>
+  );
+};
+
 export default function Home() {
   // Check if posts exist in the blog resource
   const postsArray = blog?.posts || []; 
@@ -125,6 +190,15 @@ export default function Home() {
         </Column>
       )}
 
+      {/* a detailed career goals section */}
+      <Column fillWidth paddingLeft="l">
+        <CareerGoals />
+      </Column>
+
+      <Row fillWidth paddingY="24">
+         <Line />
+      </Row>
+      
       {/* 2. Explore Projects (Reordered and limited to 2) */}
       <Column fillWidth gap="32">
         <Row fillWidth paddingLeft="l">
