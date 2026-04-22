@@ -13,30 +13,64 @@ team:
     linkedIn: "https://www.linkedin.com/srirangan-sudarshan"
 ---
 
-## Overview
+## Discovery Project Idea
 
-Developed as part of a technical workshop at the **HIVE Makerspace (Georgia Tech)**, this project explores the physical architecture of volatile memory. By constructing a functional **4-bit Dynamic Random-Access Memory (DRAM)** array from discrete components, I transitioned from high-level computer science abstractions to the fundamental hardware engineering that powers modern computing.
+This project originated from a desire to move beyond high-level abstractions of memory systems and understand how data is physically stored in hardware. As part of a workshop at the **HIVE Makerspace (Georgia Tech)**, I set out to build a small-scale **Dynamic Random-Access Memory (DRAM)** system using discrete components. The goal was to directly observe how binary data can be represented as electrical charge and controlled through transistor-based switching.
+
+## Project Progress
+
+The project was completed between **March 22nd and April 2nd**, across three focused phases:
+
+- **Conceptual Learning (3 hours):**  
+  Studied the fundamentals of DRAM, including capacitive storage and n-MOS transistor switching behavior, guided by workshop lectures.
+
+- **Hardware Implementation (2 hours):**  
+  Soldered and assembled a **4-bit DRAM array** using capacitors, n-MOS transistors, resistors, LEDs, and push-buttons on a PCB.
+
+- **Testing and Observation (2 hours):**  
+  Verified functionality by manually writing values and observing LED outputs, while analyzing real-world circuit behavior such as instability and charge decay.
+
+## Project Successes and Failures
+
+A key success was the creation of a functional **4-bit memory array** capable of storing and displaying binary states through physical charge. The LED-based feedback system provided immediate visual confirmation of stored data.
+
+One major challenge was correctly tuning **n-MOS transistor behavior**. Ensuring the appropriate gate-to-source voltage (V<sub>GS</sub>) was critical—too low prevented charging, while too high risked damaging components.
+
+Another limitation was **charge leakage**. Over time, stored charge dissipated, causing LEDs to dim. While initially a drawback, this became an important insight into why modern DRAM requires periodic refresh cycles.
+
+## ECE Skills Gained
+
+- **MOSFET Operation:** Practical understanding of n-MOS transistors as voltage-controlled switches  
+- **Analog Effects in Digital Systems:** Exposure to leakage, noise, and non-ideal behavior in circuits  
+- **Circuit Design & Soldering:** Hands-on experience building and debugging PCB-based systems  
+- **Memory Architecture:** Understanding of word lines, bit lines, and cell-level memory design  
+- **Hardware Debugging:** Systematic testing and validation of physical circuits  
 
 ## Key Features
 
-- **Discrete Cell Architecture**: Engineered a 4-bit memory array from the ground up using **n-MOS transistors** as access gates and capacitors as the storage medium, replicating the fundamental physics of commercial DRAM.
-- **Manual State Control**: Integrated a tactile interface featuring push-buttons to simulate "Write" operations, allowing for the manual injection of charge into specific memory addresses to represent binary high **1** and low **0** states.
-- **Visual Status Monitoring**: Designed a real-time feedback system using LEDs to monitor the voltage levels of the storage capacitors, providing a direct visual demonstration of data retention and the effects of parasitic discharge.
-- **Hardwired Bus Logic**: Implemented a physical "Word Line" and "Bit Line" routing system on a solderable PCB, ensuring stable signal distribution and preventing cross-talk between the individual memory bits during read/write cycles.
+- **Discrete Cell Architecture:** Built a 4-bit memory array using n-MOS transistors and capacitors to replicate DRAM cell behavior  
+- **Manual State Control:** Push-button interface to simulate write operations and inject charge into memory cells  
+- **Visual Monitoring:** LED indicators for real-time observation of stored charge and data retention  
+- **Hardwired Bus Logic:** Physical implementation of word lines and bit lines for controlled read/write access  
 
 ## Technologies Used
 
-- **N-Channel MOSFETs**: Utilized as high-speed electronic switches to gate access to the memory cells.
-- **Capacitive Storage**: Employed discrete capacitors to hold electrical charge, acting as the "memory" for each bit.
-- **HIVE Makerspace Resources**: Leveraged professional soldering equipment and circuit testing tools at Georgia Tech to move from breadboard prototype to a permanent hardware build.
-- **Discrete Components**: Integrated specific resistor values to manage current flow and protect the LED indicators from overvoltage.
-
-## Challenges and Learnings
-
-A primary challenge was mastering the **N-MOS switching characteristics**. I learned that the transistor requires a specific gate-to-source voltage (V<sub>GS</sub>) to allow current to flow; if the voltage was too low, the capacitor wouldn't charge, and if it was too high, it risked damaging the component. 
-
-Furthermore, the project provided a firsthand look at **charge leakage**. Because real-world capacitors are not perfect insulators, the "data" (charge) eventually drains, causing the LEDs to dim. This perfectly illustrated the necessity of the **Refresh Cycle** in modern RAM, where a controller must periodically rewrite the data to prevent loss.
+- **N-Channel MOSFETs** for switching  
+- **Capacitors** for charge-based data storage  
+- **Discrete Resistors & LEDs** for current control and visualization  
+- **HIVE Makerspace Tools** for soldering and circuit testing  
 
 ## Outcome
 
-The result is a functional 4-bit hardware demonstrator that demystifies how computers "remember" information. By building this at the **HIVE**, I gained a practical understanding of semiconductor behavior and the physical constraints of scaling memory, bridging the gap between theoretical logic and tangible electrical engineering.
+The final result is a working **4-bit DRAM demonstrator** that makes the concept of memory storage tangible. This project bridged the gap between theoretical computer architecture and physical hardware implementation, reinforcing my interest in low-level system design and digital hardware.
+
+## Final Thoughts
+
+This experience significantly deepened my understanding of how memory systems operate at the transistor level. It reinforced my interest in hardware-focused areas such as computer architecture and VLSI design, and highlighted the complexity hidden beneath software abstractions.
+
+I would be interested in extending this project further by scaling the memory array, implementing automated refresh logic, or interfacing it with a simple processor system.
+
+## Credits
+
+- **HIVE Makerspace (Georgia Tech):** Workshop, tools, and hands-on guidance  
+- **Workshop Instructors:** Instruction on DRAM concepts and circuit implementation
